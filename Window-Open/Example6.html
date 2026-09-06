@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Test page</h1>
+    <button onclick="showMyWindow()">Open Google</button>
+
+    <script>
+      function showMyWindow() {
+        let minWin = window.open("", "MyWindow", "Width=700,height=500");
+        minWin.document.write("<h2>Hello from the new window");
+        minWin.document.body.style.backgroundColor = "blue";
+        minWin.document.body.style.color = "white";
+      }
+    </script>
+  </body>
+</html>
