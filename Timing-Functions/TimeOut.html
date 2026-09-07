@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Test page</h1>
+    <button onclick="AlertMe()">Alert Me</button>
+
+    <script>
+      function AlertMe() {
+        let TimeoutId = setTimeout(() => {
+          alert("Messege after 3 seconds");
+        }, 3000);
+
+        // clearTimeout(TimeoutId);
+      }
+    </script>
+  </body>
+</html>

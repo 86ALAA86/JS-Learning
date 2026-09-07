@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(0, 0, 0, 0.694);
+      }
+
+      .box {
+        width: 500px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.747);
+        color: black;
+        border: 4px solid red;
+        border-radius: 10px;
+        margin: 50vh auto;
+        transform: translateY(-50%);
+      }
+      .box h2 {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        overflow: hidden;
+      }
+      .btn-primary {
+        width: 100px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.747);
+        color: black;
+        border: 4px solid red;
+        border-radius: 10px;
+        margin: 20% 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2 id="main">Your text will be displayed here</h2>
+      <button id="btn" class="btn-primary" onclick="StartNames()">start</button>
+    </div>
+    <script>
+      function StartNames() {
+        let count = 0;
+        let main = document.getElementById("main");
+        let btn = document.getElementById("btn");
+        main.textContent = "starting";
+        btn.disabled = true;
+        setTimeout(() => {
+          CallName("Ali", main, "Mohammed");
+        }, 1000);
+      }
+
+      function CallName(n, CD, m) {
+        let count = 0;
+        let IntervalId = setInterval(() => {
+          count++;
+          CD.textContent = n + count;
+
+          if (count === 33) {
+            clearInterval(IntervalId);
+            if (m === "") {
+            } else {
+              CallName(m, CD);
+            }
+          }
+        }, 200);
+      }
+    </script>
+  </body>
+</html>
