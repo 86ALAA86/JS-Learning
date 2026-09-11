@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Storage Demo</title>
+
+    <style>
+      body {
+        height: 100vh;
+        margin: 0px;
+        display: grid;
+        background: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
+
+      input {
+        padding: 10px;
+        width: 300px;
+        height: 20px;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+
+      button {
+        padding: 12px 30px;
+        margin: 6px;
+        width: 50%;
+        border: none;
+        background: #007bff;
+        color: white;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #0056b3;
+        transform: scale(1.05);
+      }
+
+      #output {
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+
+      .form {
+        background-color: #516b86;
+        border: 4px solid black;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        align-content: start;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: start;
+        height: 90%;
+        width: 85vw;
+        align-self: center;
+        justify-self: center;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form">
+      <input id="nameInput" type="text" placeholder="Enter your name..." />
+      <input id="emailInput" type="email" placeholder="Enter your email..." />
+      <input
+        id="colorInput"
+        type="text"
+        placeholder="Enter your favorit color..."
+      />
+
+      <button onclick="saveLS()">Save in Local Storage</button>
+      <button onclick="loadLS()">Load from Local Storage</button>
+      <button onclick="DeleteItem()">Delete one item</button>
+      <button onclick="clearLS()">Clear all local storage</button>
+
+      <pre id="output"></pre>
+    </div>
+
+    <script>
+      // ---------------------------------------------------------
+      // LOCAL STORAGE FUNCTIONS
+      // ---------------------------------------------------------
+
+      // Save data into Local Storage
+      function saveLS() {
+        // Read value from input field
+        let name = document.getElementById("nameInput").value;
+        let email = document.getElementById("emailInput").value;
+        let color = document.getElementById("colorInput").value;
+
+        // Save the value under the key "name"
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("color", color);
+
+        // Notify the user
+        alert("Saved in localStorage");
+      }
+
+      // Load data from Local Storage
+      function loadLS() {
+        // Retrieve the value stored under "name"
+        let name = localStorage.getItem("name");
+        let email = localStorage.getItem("email");
+        let color = localStorage.getItem("color");
+
+        // Show it in the output area
+        // (If no value found, show 'No value found')
+        document.getElementById("output").textContent = `
+          Local Storage: 
+          ${name ?? "No value found"} \n
+          Local Storage:  
+          ${email ?? "No value found"} \n
+          Local Storage: 
+          ${color ?? "No value found"}\n`;
+      }
+
+      function DeleteItem() {
+        localStorage.removeItem("name");
+        alert("localStorage name is removed");
+      }
+
+      // Clear ALL data inside Local Storage
+      function clearLS() {
+        localStorage.clear();
+        alert("localStorage cleared");
+      }
+    </script>
+  </body>
+</html>
