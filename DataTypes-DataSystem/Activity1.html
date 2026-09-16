@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+        font-size: 3rem;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open The Console to see the executed JS results</h1>
+    <script>
+      let Var1 = "Ali";
+      console.log("string : " + Var1);
+
+      let Var2 = 8;
+      console.log("int number: " + Var2);
+
+      let Var3 = true;
+      console.log("Boolian : " + Var3);
+
+      let Var4 = null;
+      console.log("Null Var : " + Var4);
+
+      let Var5;
+      console.log("Undefined Var : " + Var5);
+
+      let Var6 = Symbol("My Name Is Ali");
+      let user = { name: "Ali", Age: 20 };
+      user[Var6] = "Good";
+      console.log("Symbol Val : " + user[Var6]);
+
+      let big = 123456789012345678901234567890n;
+
+      console.log("Big int : " + big);
+    </script>
+  </body>
+</html>
