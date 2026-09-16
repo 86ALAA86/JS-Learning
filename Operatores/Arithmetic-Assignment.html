@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+
+    <script>
+      "use sticte";
+      {
+        let a = 12;
+        let b = 4;
+        console.log(`Exercise 1 :\n\n`);
+
+        console.log("a+b= " + (a + b));
+        console.log("a-b= " + (a - b));
+        console.log("a*b= " + a * b);
+        console.log("a/b= " + a / b);
+        console.log("a%b= " + (a % b));
+      }
+
+      {
+        let x = 10;
+
+        console.log(`Exercise 2 :\n\n`);
+
+        console.log("Add 5 to x " + (x += 5));
+        console.log("Multiply x by 2 " + (x *= 2));
+        console.log("Subtract 4 " + (x -= 4));
+        console.log("Divide by 2 " + (x /= 2));
+        console.log("Raise x to the 3rd power " + (x **= 3));
+        console.log(" x = " + x);
+      }
+
+      {
+        let count = 0;
+
+        console.log(`Exercise 3 :\n\n`);
+
+        console.log("Increase count using postfix ++ : " + count++);
+        console.log("Increase count using prefix ++ : " + ++count);
+        console.log("Decrease count using -- : " + count--);
+        console.log("Print final count : " + count);
+      }
+
+      {
+        let price = 50;
+        let quantity = 3;
+        let final = 0;
+        console.log(`Exercise 4 :\n\n`);
+        final = price * quantity;
+        console.log("Calculate total cost using * : " + final);
+        final = (final * 90) / 100;
+        console.log("Apply a discount of 10 using -= ++ : " + final);
+        final *= 1.15;
+        console.log("Add tax of 15% using *= : " + final);
+        console.log("Print final amount : " + final);
+      }
+
+      {
+        let num = 4;
+
+        console.log(`Exercise 5 :\n\n`);
+
+        console.log("Square of num using ** : " + num ** 2);
+        console.log("Cube of num using **= : " + (num **= 3));
+      }
+
+      {
+        let n = 27;
+
+        console.log(`Exercise 6 :\n\n`);
+
+        if (n % 2 === 0) console.log(n + "is Even ");
+        else console.log(n + "is odd ");
+      }
+
+      {
+        let score = 100;
+        console.log(`Exercise 7 :\n\n`);
+        score -= 20;
+        score /= 4;
+        score **= 2;
+        score %= 50;
+        console.log(score);
+      }
+    </script>
+  </body>
+</html>

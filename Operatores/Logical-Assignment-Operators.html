@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+
+    <script>
+      let a = "";
+      let b = 0;
+      let c = null;
+      let d = "Hello";
+
+      a ||= "Default"; // replaced
+      b ||= 5; // replaced (0 is falsy)
+      c ??= "Fallback"; // replaced
+      d &&= "Updated"; // replaced
+
+      console.log(a); // "Default"
+      console.log(b); // 5
+      console.log(c); // "Fallback"
+      console.log(d); // "Updated"
+    </script>
+  </body>
+</html>

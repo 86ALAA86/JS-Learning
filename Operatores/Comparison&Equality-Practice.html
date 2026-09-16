@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+
+    <script>
+      {
+        console.log(`Exercise 1 : \n\n\n`);
+        console.log(7 > 3);
+        console.log("b" > "a");
+        console.log(10 <= 10);
+        console.log("cat" < "car");
+      }
+
+      {
+        console.log(`Exercise 2 : \n\n\n`);
+        console.log(5 == "5");
+        console.log(5 === "5");
+        console.log(false == 0);
+        console.log(false === 0);
+      }
+
+      {
+        let age = "18";
+        console.log(`Exercise 3 : \n\n\n`);
+
+        if (Number.isNaN(age) && Number(age) === 18)
+          console.log("Access Granted");
+      }
+
+      {
+        console.log(`Exercise 4 : \n\n\n`);
+        console.log(null == undefined);
+        console.log(null === undefined);
+        console.log([] == "");
+        console.log([] == "");
+        console.log(" " == 0);
+        console.log(" " === 0);
+      }
+    </script>
+  </body>
+</html>
