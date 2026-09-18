@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+
+    <script>
+      {
+        console.log(`\n\n\n Example 1 : \n`);
+        const car = { brand: "BMW", year: 2020, color: "Black" };
+        for (let P in car) {
+          console.log(`${P} : ${car[P]}`);
+        }
+      }
+
+      {
+        console.log(`\n\n\n Example 2 : \n`);
+        let items = ["Pen", "Book", "Laptop"];
+        for (let val of items) {
+          console.log(`${val} `);
+        }
+      }
+
+      {
+        console.log(`\n\n\n Example 3 : \n`);
+        for (let i of "Ali") {
+          console.log(`${i} `);
+        }
+      }
+
+      {
+        console.log(`\n\n\n Example 4 : \n`);
+        let count = 0;
+        let vowels = "auoie";
+        for (let char of "ali") {
+          if (vowels.includes(char)) count++;
+        }
+        console.log(count);
+      }
+
+      {
+        console.log(`\n\n\n Example 5 : \n`);
+        let nums = [1, 2, 3, 4];
+        let sum = 0;
+        for (let n of nums) {
+          sum += n;
+        }
+        console.log(sum);
+      }
+    </script>
+  </body>
+</html>

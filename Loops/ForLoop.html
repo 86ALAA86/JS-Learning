@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+
+    <script>
+      {
+        console.log("\nExample 1 :\n\n\n");
+        for (let i = 0; i <= 20; i++) {
+          console.log(i + " ");
+        }
+      }
+
+      {
+        console.log("\nExample 2 :\n\n\n");
+        for (let i = 0; i <= 20; i += 2) {
+          console.log(i + " ");
+        }
+      }
+
+      {
+        console.log("\nExample 3 :\n\n\n");
+        let sum = 0;
+        for (let i = 0; i <= 100; i++) {
+          sum += i;
+        }
+        console.log(sum);
+      }
+
+      {
+        console.log("\nExample 4 :\n\n\n");
+        for (let i = 10; i >= 0; i--) {
+          console.log(i + " ");
+        }
+      }
+
+      {
+        console.log("\nExample 5 :\n\n\n");
+
+        let array = ["Apple", "Banana", "Orange"];
+
+        for (let index = 0; index < array.length; index++) {
+          console.log([index]);
+        }
+      }
+
+      {
+        console.log("\nExample 6 :\n\n\n");
+
+        let nums = [10, 55, 3, 99, 7];
+        let max = nums[0];
+        for (let index = 0; index < nums.length; index++) {
+          if (max < nums[i]) {
+            max = nums[i];
+          }
+        }
+        console.log(max);
+      }
+
+      {
+        console.log("\nExample 7 :\n\n\n");
+        for (let i = 0; i <= 10; i++) {
+          if (i === 7) {
+            continue;
+          }
+          console.log(i + " ");
+        }
+      }
+
+      {
+        console.log("\nExample 8 :\n\n\n");
+        for (let i = 0; i <= 10; i++) {
+          if (i === 5) {
+            break;
+          }
+          console.log(i + " ");
+        }
+      }
+    </script>
+  </body>
+</html>

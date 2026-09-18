@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red; font-size: 3rem; margin: 30px">
+      Open The Console to see the executed JS results
+    </h1>
+    <script>
+      {
+        console.log(`\n\n\nExample 1 :\n`);
+        let n = 5;
+        while (n > 0) {
+          console.log(n);
+          n--;
+        }
+      }
+
+      {
+        console.log(`\n\n\nExample 2 :\n`);
+        let n = Math.floor(Math.random() * 10); // 0 to 9
+        while (true) {
+          console.log(n);
+          if (n === 7) {
+            break;
+          }
+          n = Math.floor(Math.random() * 10);
+        }
+      }
+
+      {
+        console.log(`\n\n\nExample 3 :\n`);
+        let input = "";
+        do {
+          input = prompt("enter exit :");
+        } while (input !== "exit");
+        console.log("user entered exit");
+      }
+
+      {
+        console.log(`\n\n\nExample 4 :\n`);
+        let n = 1;
+        do {
+          console.log(n);
+          n++;
+        } while (n < 4);
+      }
+    </script>
+  </body>
+</html>
